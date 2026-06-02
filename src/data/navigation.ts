@@ -1,0 +1,226 @@
+import {
+  Home,
+  Landmark,
+  BriefcaseBusiness,
+  Scale,
+  Plane,
+  Languages,
+  TrendingUp,
+  GraduationCap,
+  Megaphone,
+  Target,
+  WalletCards,
+  Bot,
+  Calendar,
+  FileBarChart,
+  Search,
+  Settings,
+} from "lucide-react";
+import type { NavItem, ModuleDetail } from "../types";
+
+export const fdsModule = "FDS - Financial Diversification";
+
+export const mainNav: NavItem[] = [
+  { label: "Home Dashboard", icon: Home },
+  { label: "Taxation Services", icon: Landmark },
+  { label: "Amazon Services", icon: BriefcaseBusiness },
+  { label: "Law Services", icon: Scale },
+  { label: "Immigration Services", icon: Plane },
+  { label: "Language Services", icon: Languages },
+  { label: "Investment Services", icon: TrendingUp },
+  { label: "Academic Services", icon: GraduationCap },
+  { label: "Marketing Services", icon: Megaphone },
+  { label: "Training Services", icon: Target },
+  { label: fdsModule, icon: WalletCards },
+];
+
+export const systemNav: NavItem[] = [
+  { label: "AI Assistant", icon: Bot, badge: "New" },
+  { label: "Calendar & Reminders", icon: Calendar },
+  { label: "Reports & Analytics", icon: FileBarChart },
+  { label: "Search & Filters", icon: Search },
+  { label: "Settings", icon: Settings },
+];
+
+export const moduleDetails: Record<string, ModuleDetail> = {
+  "Home Dashboard": {
+    title: "Home Dashboard",
+    subtitle: "Overview of service activity, revenue, tasks, and client follow-ups.",
+    icon: Home,
+    stats: [
+      { label: "Active Clients", value: "128", tone: "text-blue-700" },
+      { label: "Open Tasks", value: "34", tone: "text-amber-700" },
+      { label: "Monthly Revenue", value: "PKR 245,680", tone: "text-emerald-700" },
+      { label: "Due This Week", value: "17", tone: "text-rose-700" },
+    ],
+    workflow: ["Review today tasks", "Check service pipelines", "Follow up pending clients", "Export monthly report"],
+  },
+  "Taxation Services": {
+    title: "Taxation Services",
+    subtitle: "Client tax filing, NTN/FBR registration, notices, and return tracking.",
+    icon: Landmark,
+    stats: [
+      { label: "Returns", value: "42", tone: "text-blue-700" },
+      { label: "Pending Docs", value: "15", tone: "text-amber-700" },
+      { label: "Completed", value: "27", tone: "text-emerald-700" },
+      { label: "Notices", value: "6", tone: "text-rose-700" },
+    ],
+    workflow: ["Collect documents", "Prepare tax working", "Submit return", "Archive acknowledgement"],
+  },
+  "Amazon Services": {
+    title: "Amazon Services",
+    subtitle: "Store setup, listing optimization, sourcing, PPC, and account health.",
+    icon: BriefcaseBusiness,
+    stats: [
+      { label: "Stores", value: "18", tone: "text-blue-700" },
+      { label: "Listings", value: "76", tone: "text-emerald-700" },
+      { label: "PPC Audits", value: "9", tone: "text-amber-700" },
+      { label: "Health Alerts", value: "3", tone: "text-rose-700" },
+    ],
+    workflow: ["Audit account", "Optimize listings", "Track PPC", "Report growth actions"],
+  },
+  "Law Services": {
+    title: "Law Services",
+    subtitle: "Case files, agreements, legal notices, hearings, and client documents.",
+    icon: Scale,
+    stats: [
+      { label: "Cases", value: "24", tone: "text-blue-700" },
+      { label: "Hearings", value: "8", tone: "text-amber-700" },
+      { label: "Drafts", value: "12", tone: "text-emerald-700" },
+      { label: "Urgent", value: "4", tone: "text-rose-700" },
+    ],
+    workflow: ["Register case", "Prepare documents", "Track hearing", "Update client"],
+  },
+  "Immigration Services": {
+    title: "Immigration Services",
+    subtitle: "Visa consultation, eligibility checks, document checklists, and application tracking.",
+    icon: Plane,
+    stats: [
+      { label: "Applications", value: "31", tone: "text-blue-700" },
+      { label: "Document Gaps", value: "11", tone: "text-amber-700" },
+      { label: "Submitted", value: "19", tone: "text-emerald-700" },
+      { label: "Interviews", value: "5", tone: "text-rose-700" },
+    ],
+    workflow: ["Assess eligibility", "Build checklist", "Submit file", "Track decision"],
+  },
+  "Language Services": {
+    title: "Language Services",
+    subtitle: "Translation, interpretation, language training, and certification workflow.",
+    icon: Languages,
+    stats: [
+      { label: "Projects", value: "29", tone: "text-blue-700" },
+      { label: "In Review", value: "7", tone: "text-amber-700" },
+      { label: "Delivered", value: "22", tone: "text-emerald-700" },
+      { label: "Rush Jobs", value: "3", tone: "text-rose-700" },
+    ],
+    workflow: ["Receive source file", "Assign translator", "Quality check", "Deliver final file"],
+  },
+  "Investment Services": {
+    title: "Investment Services",
+    subtitle: "Portfolio tracking, client risk profiles, goals, and advisory follow-ups.",
+    icon: TrendingUp,
+    stats: [
+      { label: "Portfolios", value: "37", tone: "text-blue-700" },
+      { label: "Reviews Due", value: "10", tone: "text-amber-700" },
+      { label: "Growth Plans", value: "21", tone: "text-emerald-700" },
+      { label: "Risk Alerts", value: "2", tone: "text-rose-700" },
+    ],
+    workflow: ["Update profile", "Review allocation", "Record advice", "Schedule follow-up"],
+  },
+  "Academic Services": {
+    title: "Academic Services",
+    subtitle: "Admissions, documentation, research support, and student progress tracking.",
+    icon: GraduationCap,
+    stats: [
+      { label: "Students", value: "54", tone: "text-blue-700" },
+      { label: "Applications", value: "23", tone: "text-amber-700" },
+      { label: "Accepted", value: "16", tone: "text-emerald-700" },
+      { label: "Deadlines", value: "9", tone: "text-rose-700" },
+    ],
+    workflow: ["Assess student", "Shortlist options", "Prepare documents", "Submit application"],
+  },
+  "Marketing Services": {
+    title: "Marketing Services",
+    subtitle: "Campaigns, leads, content calendar, analytics, and client reporting.",
+    icon: Megaphone,
+    stats: [
+      { label: "Campaigns", value: "14", tone: "text-blue-700" },
+      { label: "Leads", value: "312", tone: "text-emerald-700" },
+      { label: "Content Due", value: "18", tone: "text-amber-700" },
+      { label: "Escalations", value: "4", tone: "text-rose-700" },
+    ],
+    workflow: ["Plan campaign", "Publish content", "Track leads", "Share report"],
+  },
+  "Training Services": {
+    title: "Training Services",
+    subtitle: "Course batches, enrollments, trainers, schedules, and progress reports.",
+    icon: Target,
+    stats: [
+      { label: "Batches", value: "11", tone: "text-blue-700" },
+      { label: "Learners", value: "186", tone: "text-emerald-700" },
+      { label: "Sessions", value: "28", tone: "text-amber-700" },
+      { label: "Assessments", value: "6", tone: "text-rose-700" },
+    ],
+    workflow: ["Create batch", "Enroll learners", "Mark attendance", "Issue progress report"],
+  },
+  "AI Assistant": {
+    title: "AI Assistant",
+    subtitle: "Draft replies, summarize cases, prepare checklists, and speed up office work.",
+    icon: Bot,
+    stats: [
+      { label: "Drafts", value: "12", tone: "text-blue-700" },
+      { label: "Summaries", value: "25", tone: "text-emerald-700" },
+      { label: "Templates", value: "18", tone: "text-amber-700" },
+      { label: "Reviews", value: "5", tone: "text-rose-700" },
+    ],
+    workflow: ["Pick service context", "Generate draft", "Review output", "Send or save"],
+  },
+  "Calendar & Reminders": {
+    title: "Calendar & Reminders",
+    subtitle: "Meetings, filing dates, hearings, application deadlines, and client reminders.",
+    icon: Calendar,
+    stats: [
+      { label: "Today", value: "7", tone: "text-blue-700" },
+      { label: "This Week", value: "22", tone: "text-amber-700" },
+      { label: "Completed", value: "41", tone: "text-emerald-700" },
+      { label: "Overdue", value: "3", tone: "text-rose-700" },
+    ],
+    workflow: ["Create reminder", "Assign owner", "Set due date", "Track completion"],
+  },
+  "Reports & Analytics": {
+    title: "Reports & Analytics",
+    subtitle: "Revenue, services, conversion, workload, and team performance reporting.",
+    icon: FileBarChart,
+    stats: [
+      { label: "Reports", value: "16", tone: "text-blue-700" },
+      { label: "Exports", value: "44", tone: "text-emerald-700" },
+      { label: "Dashboards", value: "9", tone: "text-amber-700" },
+      { label: "Anomalies", value: "2", tone: "text-rose-700" },
+    ],
+    workflow: ["Select period", "Filter service", "Review charts", "Export report"],
+  },
+  "Search & Filters": {
+    title: "Search & Filters",
+    subtitle: "Global lookup for clients, files, reminders, reports, and service records.",
+    icon: Search,
+    stats: [
+      { label: "Indexed Clients", value: "128", tone: "text-blue-700" },
+      { label: "Files", value: "642", tone: "text-emerald-700" },
+      { label: "Saved Filters", value: "13", tone: "text-amber-700" },
+      { label: "Needs Tagging", value: "21", tone: "text-rose-700" },
+    ],
+    workflow: ["Search keyword", "Apply filters", "Open record", "Save view"],
+  },
+  Settings: {
+    title: "Settings",
+    subtitle: "Firm profile, users, permissions, services, notification rules, and preferences.",
+    icon: Settings,
+    stats: [
+      { label: "Users", value: "8", tone: "text-blue-700" },
+      { label: "Roles", value: "4", tone: "text-emerald-700" },
+      { label: "Services", value: "11", tone: "text-amber-700" },
+      { label: "Alerts", value: "6", tone: "text-rose-700" },
+    ],
+    workflow: ["Update firm profile", "Manage users", "Configure modules", "Save preferences"],
+  },
+};
