@@ -23,7 +23,7 @@ export function KpiCard({
   bg,
 }: KpiCardProps) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-card">
+    <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-card">
       <div className="flex items-start gap-3">
         <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${bg}`} style={{ color }}>
           <Icon size={24} />

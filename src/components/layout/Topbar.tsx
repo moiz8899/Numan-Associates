@@ -265,8 +265,8 @@ export function Topbar({ activeModule, onModuleSelect }: TopbarProps) {
       : `Search ${title.toLowerCase()}...`;
 
   return (
-    <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="flex min-h-20 items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-20 w-full max-w-full border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="flex min-h-20 min-w-0 items-center gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
         <button
           type="button"
           onClick={() => setShowMobileNav(true)}
@@ -275,7 +275,7 @@ export function Topbar({ activeModule, onModuleSelect }: TopbarProps) {
         >
           <Menu size={22} />
         </button>
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <div className="flex items-center gap-3">
             <Icon size={28} className="shrink-0 text-slate-800" />
             <h1 className="truncate text-xl font-extrabold text-slate-950 sm:text-2xl">{title}</h1>
@@ -289,14 +289,14 @@ export function Topbar({ activeModule, onModuleSelect }: TopbarProps) {
             placeholder={placeholder}
           />
         </div>
-        <div className="ml-auto flex items-center gap-2 relative">
+        <div className="relative flex shrink-0 items-center gap-2">
           <IconButton icon={Calendar} label="Calendar actions" onClick={handleCalendarClick} />
           <IconButton icon={Bell} badge="8" label="Notifications" onClick={handleBellClick} />
           <IconButton icon={MessageSquare} badge="3" label="Messages" onClick={handleMessageClick} />
           <button
             type="button"
             onClick={handleProfileClick}
-            className="ml-1 flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-2.5 py-2 shadow-sm"
+            className="flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-2 py-2 shadow-sm sm:gap-3 sm:px-2.5"
           >
             <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-sm font-extrabold text-white">
               {profileImageUrl ? (

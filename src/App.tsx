@@ -24,11 +24,11 @@ export function App() {
   const [activeModule, setActiveModule] = useState("Home Dashboard");
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-900">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#f8fafc] font-sans text-slate-900">
       <Sidebar activeModule={activeModule} onSelect={setActiveModule} />
-      <div className="lg:pl-72">
+      <div className="min-w-0 lg:pl-72">
         <Topbar activeModule={activeModule} onModuleSelect={setActiveModule} />
-        <main className="space-y-6 px-4 py-6 sm:px-6 lg:px-8">
+        <main className="w-full min-w-0 space-y-6 overflow-x-hidden px-4 py-6 sm:px-6 lg:px-8">
           {activeModule === "Home Dashboard" ? (
             <HomeDashboard onNavigate={setActiveModule} />
           ) : activeModule === "Taxation Services" ? (
